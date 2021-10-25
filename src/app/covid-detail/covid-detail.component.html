@@ -1,0 +1,193 @@
+<app-nav></app-nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4" id="demotext">Continents Covid 19 Data</h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+
+<mat-spinner *ngIf="isLoading && !isNetworkBad " color="warn" diameter="60" style="
+align-self: center;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);"></mat-spinner>
+<div *ngIf="isNetworkBad">
+
+    <div class="no_internet">
+      <div>
+
+
+        <h1 class="no_internet_alert">⚠</h1>
+        <h2>Can't find <b> {{search_query}}</b></h2>
+        <p>Check your spelling or</p> <br>
+        <p>Please check your internet connection.</p>
+
+    </div>
+
+    </div>
+
+
+
+</div>
+
+<div class="card-group"  *ngIf="!isLoading">
+   <div class="card">
+      <div id="demotext2">{{data[0].continent}}</div>
+     <div class="card-body">
+      <div class="alert alert-success alert-flex"  role="alert">
+       <p>Active Cases:</p> 
+       <button type="button" class="btn btn-success">{{data[0].active}}</button>
+       </div>
+       <div class="alert alert-warning alert-flex"  role="alert">
+         <p>Recovered:</p> 
+         <button type="button" class="btn btn-warning">{{data[0].recovered}}</button>
+         </div>
+         <div class="alert alert-info alert-flex"  role="alert">
+            <p>Total Cases:</p> 
+            <button type="button" class="btn btn-info">{{data[0].cases}}</button>
+            </div>
+             <div class="alert alert-danger alert-flex"  role="alert">
+       <p>Deaths:</p> 
+       <button type="button" class="btn btn-danger">{{data[0].deaths}}</button>
+       </div>
+     </div>
+     <div class="card-footer">
+       <small class="text-muted">Last updated 3 mins ago</small>
+     </div>
+   </div>
+  
+
+    <div class="card">
+      <div id="demotext2">{{data[1].continent}}</div>
+     <div class="card-body">
+      <div class="alert alert-success alert-flex"  role="alert">
+       <p>Active Cases:</p> 
+       <button type="button" class="btn btn-success">{{data[1].active}}</button>
+       </div>
+       <div class="alert alert-warning alert-flex"  role="alert">
+         <p>Recovered:</p> 
+         <button type="button" class="btn btn-warning">{{data[1].recovered}}</button>
+         </div>
+         <div class="alert alert-info alert-flex"  role="alert">
+            <p>Total Cases:</p> 
+            <button type="button" class="btn btn-info">{{data[1].cases}}</button>
+            </div>
+             <div class="alert alert-danger alert-flex"  role="alert">
+       <p>Deaths:</p> 
+       <button type="button" class="btn btn-danger">{{data[1].deaths}}</button>
+       </div>
+     </div>
+     <div class="card-footer">
+       <small class="text-muted">Last updated 3 mins ago</small>
+     </div>
+   </div>
+
+
+   <div class="card">
+      <div id="demotext2">{{data[2].continent}}</div>
+     <div class="card-body">
+      <div class="alert alert-success alert-flex"  role="alert">
+       <p>Active Cases:</p> 
+       <button type="button" class="btn btn-success">{{data[2].active}}</button>
+       </div>
+       <div class="alert alert-warning alert-flex"  role="alert">
+         <p>Recovered:</p> 
+         <button type="button" class="btn btn-warning">{{data[2].recovered}}</button>
+         </div>
+         <div class="alert alert-info alert-flex"  role="alert">
+            <p>Total Cases:</p> 
+            <button type="button" class="btn btn-info">{{data[2].cases}}</button>
+            </div>
+             <div class="alert alert-danger alert-flex"  role="alert">
+       <p>Deaths:</p> 
+       <button type="button" class="btn btn-danger">{{data[2].deaths}}</button>
+       </div>
+     </div>
+     <div class="card-footer">
+       <small class="text-muted">Last updated 3 mins ago</small>
+     </div>
+   </div>
+ </div>
+
+ <div class="card-group"  *ngIf="!isLoading">
+   <div class="card">
+      <div id="demotext2">{{data[3].continent}}</div>
+     <div class="card-body">
+      <div class="alert alert-success alert-flex"  role="alert">
+       <p>Active Cases:</p> 
+       <button type="button" class="btn btn-success">{{data[3].active}}</button>
+       </div>
+       <div class="alert alert-warning alert-flex"  role="alert">
+         <p>Recovered:</p> 
+         <button type="button" class="btn btn-warning">{{data[3].recovered}}</button>
+         </div>
+         <div class="alert alert-info alert-flex"  role="alert">
+            <p>Total Cases:</p> 
+            <button type="button" class="btn btn-info">{{data[3].cases}}</button>
+            </div>
+             <div class="alert alert-danger alert-flex"  role="alert">
+       <p>Deaths:</p> 
+       <button type="button" class="btn btn-danger">{{data[3].deaths}}</button>
+       </div>
+     </div>
+     <div class="card-footer">
+       <small class="text-muted">Last updated 3 mins ago</small>
+     </div>
+   </div>
+  
+
+    <div class="card">
+      <div id="demotext2">{{data[4].continent}}</div>
+     <div class="card-body">
+      <div class="alert alert-success alert-flex"  role="alert">
+       <p>Active Cases:</p> 
+       <button type="button" class="btn btn-success">{{data[4].active}}</button>
+       </div>
+       <div class="alert alert-warning alert-flex"  role="alert">
+         <p>Recovered:</p> 
+         <button type="button" class="btn btn-warning">{{data[4].recovered}}</button>
+         </div>
+         <div class="alert alert-info alert-flex"  role="alert">
+            <p>Total Cases:</p> 
+            <button type="button" class="btn btn-info">{{data[4].cases}}</button>
+            </div>
+             <div class="alert alert-danger alert-flex"  role="alert">
+       <p>Deaths:</p> 
+       <button type="button" class="btn btn-danger">{{data[4].deaths}}</button>
+       </div>
+     </div>
+     <div class="card-footer">
+       <small class="text-muted">Last updated 3 mins ago</small>
+     </div>
+   </div>
+
+
+   <div class="card">
+      <div id="demotext2">{{data[5].continent}}</div>
+     <div class="card-body">
+      <div class="alert alert-success alert-flex"  role="alert">
+       <p>Active Cases:</p> 
+       <button type="button" class="btn btn-success">{{data[5].active}}</button>
+       </div>
+       <div class="alert alert-warning alert-flex"  role="alert">
+         <p>Recovered:</p> 
+         <button type="button" class="btn btn-warning">{{data[5].recovered}}</button>
+         </div>
+         <div class="alert alert-info alert-flex"  role="alert">
+            <p>Total Cases:</p> 
+            <button type="button" class="btn btn-info">{{data[5].cases}}</button>
+            </div>
+             <div class="alert alert-danger alert-flex"  role="alert">
+       <p>Deaths:</p> 
+       <button type="button" class="btn btn-danger">{{data[5].deaths}}</button>
+       </div>
+     </div>
+     <div class="card-footer">
+       <small class="text-muted">Last updated 3 mins ago</small>
+     </div>
+   </div>
+ </div>
+

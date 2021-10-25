@@ -1,0 +1,79 @@
+
+<mat-spinner *ngIf="isLoading && !isNetworkBad " color="warn" diameter="60" style="
+align-self: center;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);"></mat-spinner>
+<div *ngIf="isNetworkBad">
+
+    <div class="no_internet">
+      <div>
+
+
+        <h1 class="no_internet_alert">⚠</h1>
+        <h2>Can't find <b> {{search_query}}</b></h2>
+        <p>Check your spelling or</p> <br>
+        <p>Please check your internet connection.</p>
+
+    </div>
+    </div>
+
+
+
+</div>
+
+<app-nav></app-nav>
+
+  
+ <div class="jumbotron jumbotron-fluid" *ngIf="!isLoading">
+    <div class="container">
+      <h1 class="display-4" id="demotext"> Covid 19 Data/ {{data.country}}</h1>
+      <p class="lead"></p>
+    </div>
+  </div>
+
+
+
+
+
+ 
+  <div class="card-group">
+    <div class="card">
+  
+    </div>
+   
+ 
+    <div class="card" style="width: inherit;" *ngIf="!isLoading">
+        <img class="card-img-top" src="{{data.countryInfo.flag}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{data.country}}</h5>
+        
+            <div class="alert alert-success alert-flex"  role="alert">
+             <p>Active Cases:</p> 
+             <button type="button" class="btn btn-success">{{data.active}}</button>
+             </div>
+             <div class="alert alert-warning alert-flex"  role="alert">
+               <p>Recovered:</p> 
+               <button type="button" class="btn btn-warning">{{data.recovered}}</button>
+               </div>
+               <div class="alert alert-info alert-flex"  role="alert">
+                  <p>Total Cases:</p> 
+                  <button type="button" class="btn btn-info">{{data.cases}}</button>
+                  </div>
+                   <div class="alert alert-danger alert-flex"  role="alert">
+             <p>Deaths:</p> 
+             <button type="button" class="btn btn-danger">{{data.deaths}}</button>
+             </div>
+          
+           <div class="card-footer">
+             <small class="text-muted">Last updated 3 mins ago</small>
+           </div>
+        </div>
+      </div>
+ 
+    <div class="card">
+     
+    </div>
+  </div>
+ 

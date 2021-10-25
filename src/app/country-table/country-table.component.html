@@ -1,0 +1,85 @@
+<mat-spinner *ngIf="isLoading && !isNetworkBad " color="warn" diameter="60" style="
+align-self: center;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);"></mat-spinner>
+<div *ngIf="isNetworkBad">
+
+    <div class="no_internet">
+        <div>
+
+
+            <h1 class="no_internet_alert">⚠</h1>
+            <h2>No connection to the internet</h2>
+            <p>Please check your internet connection.</p>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<mat-spinner *ngIf="isLoading && !isNetworkBad " color="warn" diameter="60" style="
+align-self: center;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);"></mat-spinner>
+<div *ngIf="isNetworkBad">
+
+    <div class="no_internet">
+      <div>
+
+
+        <h1 class="no_internet_alert">⚠</h1>
+        <h2>Can't find <b> {{search_query}}</b></h2>
+        <p>Check your spelling or</p> <br>
+        <p>Please check your internet connection.</p>
+
+    </div>
+    </div>
+
+
+
+</div>
+
+<app-nav></app-nav>
+
+  
+ <div class="jumbotron jumbotron-fluid" *ngIf="!isLoading">
+    <div class="container">
+      <h1 class="display-4" id="demotext"> Countries Covid 19 Data</h1>
+      <p class="lead"></p>
+    </div>
+  </div>
+
+
+<table class="table table-bordered table-striped"  *ngIf="!isLoading">
+    <thead>
+      <tr>
+        <th scope="col">Country</th>
+        <th scope="col">Active</th>
+        <th scope="col">Recovered</th>
+        <th scope="col">Total</th>
+        <th scope="col">Deaths</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datum of data">
+       <a routerLink="/country-covid-data/{{datum.country}}">
+        <th scope="row"  class="country_flag">{{datum.country}}
+            <img class="flag" src="{{datum.countryInfo.flag}}" />
+        </th>
+       </a> 
+        <td>{{datum.active}}</td>
+        <td>{{datum.recovered}}</td>
+        <td>{{datum.cases}}</td>
+        <td>{{datum.deaths}}</td>
+      </tr>
+     
+    </tbody>
+  </table>

@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo-text" href="#">COVID<span>tracker</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" mat-raised-btn  routerLink="countries-covid-data">Countries</a>
+        </li>
+    
+     
+      </ul>
+      <div class="form-inline my-5 my-lg-2">
+       <input class="form-control mr-sm-4" type="search" [(ngModel)]="search_query" placeholder="Search" aria-label="Search">
+      
+           <button class="btn btn-outline-success my-2 my-sm-1"  data-toggle="modal" data-target="#exampleModalCenter" type="submit">search</button>
+      
+     </div>
+    </div>
+  </nav>
+ 
+ 
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalCenterTitle">Filter</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body" style="display: flex; justify-content: space-between;" >
+         <a href="country-covid-data/{{search_query}}">
+         <button type="button" class="btn btn-secondary">Country</button>
+       </a>
+       <a href="continent-covid-data/{{search_query}}">
+         <button type="button" class="btn btn-primary">Continent</button>
+     </a>
+       </div>
+     </div>
+   </div>
+ </div>
+  

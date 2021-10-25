@@ -1,0 +1,48 @@
+.flag {
+    height: 20px;
+    width: 20px;
+  
+}
+.no_internet {
+    align-self: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .no_internet_alert {
+    align-self: center;
+    position: fixed;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em; 
+    text-shadow: 0 2px 2px #000; 
+  }
+
+.alert-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+   
+}
+#demotext {
+ 
+    color: #444444;
+
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+    color: #444444;
+ 
+    }
+p {
+    font-size: 2em;
+    margin-top: 8px;
+  
+}
+.logo-text {
+    font-weight: bold;
+    color: chocolate;
+}
+span {
+    color: burlywood;
+}
